@@ -335,7 +335,7 @@ input:focus {
 
 body {
   font-family: "Fira Code", monospace, "Montserrat", sans-serif;
-  background-color: #fefbfb;
+  background-color: #18181a;
 }
 
 html {
@@ -403,7 +403,7 @@ header .larguraMaxContainer nav .nav-list li a::after {
   height: 3px;
   bottom: -7px;
   left: 0;
-  background-color: #06f84f;
+  background-color: #3fdcff;
   -webkit-transform-origin: bottom right;
   transform-origin: bottom right;
   -webkit-transition: -webkit-transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
@@ -488,6 +488,11 @@ header .larguraMaxContainer nav .nav-list li a:hover {
   body {
     overflow-x: hidden;
   }
+
+  .botoes {
+    flex-direction: column;
+  }
+
   .nav-list {
     position: absolute;
     top: 10vh;
@@ -608,8 +613,8 @@ main #apresentacaoPortfolio .larguraMaxContainer #apresentacaoTexto h2 #nome {
 }
 
 main #apresentacaoPortfolio .larguraMaxContainer #apresentacaoTexto a {
-  background-color: #06f84f;
-  color: #000;
+  border: 2px solid #4364f7;
+  color: #fff;
   padding: 15px 25px;
   max-width: 250px;
   display: -webkit-box;
@@ -624,16 +629,22 @@ main #apresentacaoPortfolio .larguraMaxContainer #apresentacaoTexto a {
   -ms-flex-pack: center;
   justify-content: center;
   border-radius: 5px;
-  border: none;
+  margin-right: 1rem;
   margin-top: 30px;
   font-size: 16px;
   font-weight: 500;
+  transition: all 0.3s ease-in;
   font-family: "Fira Code", monospace, "Montserrat", sans-serif;
+}
+
+main #apresentacaoPortfolio .larguraMaxContainer #apresentacaoTexto .botoes {
+  display: flex;
+  justify-content: left;
 }
 
 main #apresentacaoPortfolio .larguraMaxContainer #apresentacaoTexto a:hover {
   cursor: pointer;
-  background-color: #a970ff;
+  border: 2px solid #6610f2;
 }
 
 main #apresentacaoPortfolio .larguraMaxContainer #apresentacaoFoto {
@@ -662,11 +673,12 @@ main #apresentacaoPortfolio .larguraMaxContainer #apresentacaoFoto #fundo {
 }
 
 main #apresentacaoPortfolio .larguraMaxContainer #apresentacaoFoto .object {
-  -webkit-animation: MoveUpDown 2s linear infinite;
-  animation: MoveUpDown 2s linear infinite;
-  position: absolute;
+  /* -webkit-animation: MoveUpDown 2s linear infinite;
+  animation: MoveUpDown 2s linear infinite; */
+  /* position: absolute;
   right: 0;
-  top: 0;
+  top: 0; */
+  padding-top: 5rem;
   z-index: 4;
   max-width: 550px;
   width: 100%;
@@ -1231,6 +1243,22 @@ main
   .cards-nomes-baixo {
   display: block;
   text-align: center;
+}
+
+#cards-conhecimentos form {
+  width: 100%;
+}
+
+#cards-conhecimentos input {
+  width: 50%;
+  padding: 0.8rem;
+}
+
+#cards-conhecimentos button {
+  background: #4364f7;
+  padding: 0.8rem;
+  color: #fff;
+  cursor: pointer;
 }
 
 main #conhecimentos .larguraMaxContainer > div #cards-conhecimentos div:hover {
